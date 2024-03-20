@@ -139,4 +139,8 @@ input[disabled] {
         text-align: center;
         width: 80%;
     }
+
+    div.containerOfThree {
+        margin-bottom: 50px;
+    }
 }

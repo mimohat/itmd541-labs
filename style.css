@@ -1,12 +1,11 @@
 /* Global styles */
 body {
-    margin: auto;
-    font-family:'Courier New', Courier, monospace;
-    background-color:;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-h1,h3 {
-    color:cornflowerblue;
+h1,
+h3 {
+    color: cornflowerblue;
     text-align: center;
 }
 
@@ -17,30 +16,81 @@ h3 {
 
 /* Form styles */
 form {
-    padding: 20px;
+    max-width: 600px;
+    padding: 20px 40px 20px 20px;
     border-radius: 10px;
-    background-color:aliceblue;
-    max-width: 400px;
-    margin: 0 auto; /* Center the form */
+    background-color: aliceblue;
     font-weight: bold;
-    color:darkslateblue;
+    font-size: large;
+    color: darkslateblue;
+    /* Center the form */
+    margin: auto;
+}
+
+div {
+    margin-bottom: 30px;
+    margin-left: -40px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+
+div.containerOfThree {
+    grid-template-columns: 2fr 1fr 1fr;
+}
+div.containerFist {
+    margin-top: 15px;
+}
+div.containerLast {
+    margin-bottom: 25px;
 }
 
 label {
     display: block;
-    margin-top: 10px;
+    font-size: larger;
+    white-space:nowrap;
+    text-align: right;
+    margin-right: 50px;
 }
 
-input[type="text"],
-input[type="range"],
+input,
 output {
     width: 96%;
     padding: 8px;
-    margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
+    font-size: x-large;
+}
+
+input[type="text"]::placeholder {
+    color: goldenrod;
+    opacity: 40%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    border-radius: 5px;
+    background: cornflowerblue;
+    height: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: gold;
+    cursor: pointer;
+    margin-top: -5px;
 }
 
 #tipPercentage {
@@ -54,39 +104,39 @@ output {
 }
 
 input[disabled] {
-    background-color:floralwhite;
+    background-color: floralwhite;
     color: #666;
-    border: none; /* Remove border to mimic a label */
-}
-
-input[type="text"]::placeholder{
-    color:goldenrod;
-    opacity: 60%;
+    /* Remove border to mimic a label */
+    border: none;
 }
 
 /* Responsive layout */
-@media (max-width: 400px) {
-    form, body {
-        background-color: #333;
-        border: none;
-        color: #f2f2f2;
-        width: 84%;
+@media (max-width: 600px) {
+    body {
+        margin: 0;
     }
 
     form {
         text-align: center;
-        padding: 10px;
+        padding: 15px;
     }
 
-    h1,h3{
-        color:cornsilk;
+    div {
+        display: block;
+        margin: 30px auto;
     }
 
-    input[type="text"],
-    input[type="range"],
-    output {
-        margin-top: 1px;
-        padding: 10px;
+    label {
+        white-space:wrap;
         text-align: center;
+        margin-right: 0;
+    }
+
+    input,
+    output {
+        margin-top: 5px;
+        padding: 15px;
+        text-align: center;
+        width: 80%;
     }
 }

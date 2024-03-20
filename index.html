@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h3><small>ITMD 541 - Lab 3 - Michu Wu</small></h3>
     <h1>Tip Calculator</h1>
 
-    <form id="tipCalculator">
-        <label for="billTotal">Bill Total:</label>
-        <input type="text" id="billTotal" placeholder="Enter bill amount">
-        <br><br>
+    <form>
+        <div class="containerFist">
+            <label for="billTotal">Bill Total:</label>
+            <input type="text" id="billTotal" placeholder="Enter bill amount">
+        </div>
 
-        <label for="tipSlider">Tip Percentage:</label>
-        <input type="range" id="tipSlider" min="0" max="25" value="15">
-        <output for="tipSlider" id="tipPercentage">15%</output>
-        <br><br>
+        <div class="containerOfThree">
+            <label for="tipSlider">Tip Percentage:</label>
+            <input type="range" id="tipSlider" min="0" max="25" value="15">
+            <output for="tipSlider" id="tipPercentage">15%</output>
+        </div>
 
-        <label for="tipAmount">Tip Amount:</label>
-        <input type="text" id="tipAmount" disabled>
-        <br><br>
+        <div>
+            <label for="tipAmount">Tip Amount:</label>
+            <input type="text" id="tipAmount" disabled>
+        </div>
 
-        <label for="totalWithTip">Total with Tip:</label>
-        <input type="text" id="totalWithTip" disabled>
+        <div class="containerLast">
+            <label for="totalWithTip">Total with Tip:</label>
+            <input type="text" id="totalWithTip" disabled>
+        </div>
     </form>
 
     <script src="script.js"></script>
 </body>
+
 </html>

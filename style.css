@@ -1,64 +1,92 @@
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 0;
+    margin: auto;
+    font-family:'Courier New', Courier, monospace;
+    background-color:;
 }
 
-h2 {
-    color: #333;
+h1,h3 {
+    color:cornflowerblue;
     text-align: center;
+}
+
+h3 {
+    margin-top: 10px;
+    font-weight: lighter;
 }
 
 /* Form styles */
 form {
-    border: 1px solid #ddd;
     padding: 20px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    border-radius: 10px;
+    background-color:aliceblue;
     max-width: 400px;
     margin: 0 auto; /* Center the form */
+    font-weight: bold;
+    color:darkslateblue;
 }
 
 label {
     display: block;
     margin-top: 10px;
-    font-size: 14px; /* Smaller font size for mobile */
 }
 
 input[type="text"],
 input[type="range"],
 output {
-    width: 100%;
+    width: 96%;
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 14px; /* Smaller font size for mobile */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+#tipPercentage {
+    display: block;
+    margin: auto;
+    border: none;
+    margin-top: -20px;
+    margin-bottom: -25px;
+    text-align: center;
+    font-weight: lighter;
 }
 
 input[disabled] {
-    background-color: #f2f2f2;
+    background-color:floralwhite;
     color: #666;
     border: none; /* Remove border to mimic a label */
 }
 
+input[type="text"]::placeholder{
+    color:goldenrod;
+    opacity: 60%;
+}
+
 /* Responsive layout */
-@media (max-width: 768px) { /* Styles for screens narrower than 768px */
+@media (max-width: 400px) {
+    form, body {
+        background-color: #333;
+        border: none;
+        color: #f2f2f2;
+        width: 84%;
+    }
+
     form {
-        border-radius: 0;
-        box-shadow: none;
+        text-align: center;
         padding: 10px;
     }
 
-    label {
-        margin-top: 5px;
+    h1,h3{
+        color:cornsilk;
     }
 
     input[type="text"],
     input[type="range"],
     output {
-        margin-top: 2px;
-        padding: 5px;
+        margin-top: 1px;
+        padding: 10px;
+        text-align: center;
     }
 }

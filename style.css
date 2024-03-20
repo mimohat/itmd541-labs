@@ -1,0 +1,64 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Form styles */
+form {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    margin: 0 auto; /* Center the form */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px; /* Smaller font size for mobile */
+}
+
+input[type="text"],
+input[type="range"],
+output {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px; /* Smaller font size for mobile */
+}
+
+input[disabled] {
+    background-color: #f2f2f2;
+    color: #666;
+    border: none; /* Remove border to mimic a label */
+}
+
+/* Responsive layout */
+@media (max-width: 768px) { /* Styles for screens narrower than 768px */
+    form {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    label {
+        margin-top: 5px;
+    }
+
+    input[type="text"],
+    input[type="range"],
+    output {
+        margin-top: 2px;
+        padding: 5px;
+    }
+}

@@ -1,2 +1,1 @@
-# labichu.github.io
-ITMD541 - Lab2
+ITMD541 - Lab3
